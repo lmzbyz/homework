@@ -25,4 +25,13 @@ $ npm start
 ```
 
 ## Illustrations
+#### When you choose a city from dropdown it shows you the all information of the city.
+
+![Main Page](./images/sehirveri.PNG)
+
+#### When you choose a date from dropdown it shows you the daily information of the city.
+
+![Main Page](./images/gunlukveri.PNG)
+
+
 
