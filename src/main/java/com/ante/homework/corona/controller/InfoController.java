@@ -7,6 +7,7 @@ import com.ante.homework.corona.service.InfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URISyntaxException;
@@ -34,13 +35,17 @@ public class InfoController {
             consumes = MediaType.ALL_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Information> postNews(@RequestBody PostModel news) throws URISyntaxException, ParseException {
-        Information result = service.saveInfo(service.stringParser(news.text));
-        return ResponseEntity.ok().body(result);
+        if(news.text.equals(" ") || StringUtils.isEmpty(news.text))
+            return ResponseEntity.badRequest().body(null);
+        else{
+            Information result = service.saveInfo(service.stringParser(news.text));
+            return ResponseEntity.ok().body(result);
+        }
     }
 
     @PostMapping("/data-of-city")
-    public void findCountOfCity(@RequestBody String cityName) {
-        service.getCounts(cityName);
+    public ResponseEntity findCountOfCity(@RequestBody String cityName) {
+        return ResponseEntity.ok().body(service.getCounts(cityName));
     }
 
     @GetMapping("/get-counts")
@@ -49,8 +54,8 @@ public class InfoController {
     }
 
     @PostMapping("/data-of-city-date")
-    public void findCountOfCityDate(@RequestBody String values) {
-        service.getCountOfDateCity(values);
+    public ResponseEntity findCountOfCityDate(@RequestBody String values) {
+        return ResponseEntity.ok().body(service.getCountOfDateCity(values));
     }
 
     @GetMapping("/get-all-counts")
