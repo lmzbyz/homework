@@ -25,5 +25,10 @@ $ npm start
 ```
 
 ## Illustrations
-![Algorithm schema](./images/sehirveri.PNG)
+
+![Main Page](./images/sehirveri.PNG)
+
+![Main Page](./images/gunlukveri.PNG)
+
+
 
