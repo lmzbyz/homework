@@ -3,6 +3,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Illustrations](#illustrations)
 
 ## General info
 Simple corona virus information tracker.
@@ -22,3 +23,6 @@ $ cd src\main\react-frontend
 $ npm install
 $ npm start
 ```
+
+## Illustrations
+
