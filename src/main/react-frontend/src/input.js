@@ -122,12 +122,14 @@ class InputForm extends React.Component {
                     <Select options={this.state.selectOptions}
                             value={selectedOption}
                             onChange={this.handleCityChange}
+                            placeholder={"Şehir seçin.."}
                     />
                 </div>
                 <div>
                     <Select options={this.state.dateOption}
                             value={selectedDate}
                             onChange={this.handleDateChange}
+                            placeholder={"Tarih seçin.."}
                     />
                 </div>
                 <BarChart date={selectedDate.label} location={selectedOption.label} legendPosition="bottom"/>
