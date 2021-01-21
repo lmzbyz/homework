@@ -17,6 +17,8 @@ Project is created with:
 
 ## Setup
 To run this project, download the project and go to the directory it is located.
+```
 $ cd src\main\react-frontend
 $ npm install
 $ npm start
+```
