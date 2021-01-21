@@ -3,8 +3,9 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Illustrations](#illustrations)
 * [How To Use](#how-to-use)
+* [Illustrations](#illustrations)
+
 
 ## General info
 Simple corona virus information tracker.
