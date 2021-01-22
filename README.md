@@ -14,6 +14,7 @@ Simple corona virus information tracker.
 Project is created with:
 * Java SDK 11 version 11.0.9
 * Maven 3.6.3
+* Spring Boot 2.4.1
 * axios 0.21.1
 * react 17.0.1
 * react-chartjs-2 2.11.1
